@@ -5634,3 +5634,14 @@ body {
 .loadomatic__back-link--hidden {
   display: none;
 }
+
+.link-bella {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove the default underline */
+    transition: text-decoration 2.5s ease; /* Smooth transition for underline */
+}
+
+.link-bella:hover {
+    text-decoration: underline;
+    transition: text-decoration 2.5s ease;  /* Underline on hover */
+}
