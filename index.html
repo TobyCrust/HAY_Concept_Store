@@ -37,9 +37,9 @@ which one -->
 	<meta property="og:type" content="website">
 
 	<meta name="description"
-		content="Reimagining the iconic Balenciaga store in Soho, I’ve created a fresh, innovative space inspired by HAY's Scandinavian aesthetic and modern design philosophy.">
+		content="Reimagining the iconic Balenciaga store in Soho, I've created a fresh, innovative space inspired by HAY's Scandinavian aesthetic and modern design philosophy.">
 	<meta property="og:description"
-		content="Reimagining the iconic Balenciaga store in Soho, I’ve created a fresh, innovative space inspired by HAY's Scandinavian aesthetic and modern design philosophy.">
+		content="Reimagining the iconic Balenciaga store in Soho, I've created a fresh, innovative space inspired by HAY's Scandinavian aesthetic and modern design philosophy.">
 
 	<meta property="og:title" content="LeanForwardDesigns - Toby Crust">
 	<title itemprop="name">LeanForwardDesigns - Toby Crust</title>
@@ -256,7 +256,7 @@ which one -->
 								<div class="typeset typeset--large">
 									<p>Reimagining the Balenciaga store in Soho New York, this concept transforms it into an engaging HAY retail space that invites customers to experience Scandinavian-inspired furniture and lifestyle designs firsthand.</p>
 
-										<p>In collaboration with <a href="https://isabelllabardon.cargo.site/" class="link-bella" target="_blank">Bella Bardon</a>, the redesign features a stylish café and an immersive showroom, creating a dynamic environment to experience HAY’s furniture and lifestyle firsthand.</p>
+										<p>In collaboration with <a href="https://isabelllabardon.cargo.site/" class="link-bella" target="_blank">Bella Bardon</a>, the redesign features a stylish café and an immersive showroom, creating a dynamic environment to experience HAY's furniture and lifestyle firsthand.</p>
 								</div>
 							</div>
 							<div class="grid__item a6-16 f6-6">
@@ -287,6 +287,56 @@ which one -->
 						</div>
 					</div>
 				</div>
+
+
+				<div class="container">
+					<div class="grid flex">
+						<div class="grid__item a16-16">
+							<div class="project-block__image">
+								<iframe
+									id="youtubeVideo"
+									src="https://www.youtube.com/embed/uXPjgf22bLc?si=gZx-MUJLzZaw-Oom&autoplay=0&mute=1&enablejsapi=1"
+									style="width: 100%; aspect-ratio: 16/9; margin-bottom: 80px;"
+									title="HAY Store" 
+									frameborder="0" 
+									allow="autoplay; fullscreen; picture-in-picture"
+									allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					// Load YouTube API
+					var tag = document.createElement('script');
+					tag.src = "https://www.youtube.com/iframe_api";
+					var firstScriptTag = document.getElementsByTagName('script')[0];
+					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+					var player;
+					function onYouTubeIframeAPIReady() {
+						player = new YT.Player('youtubeVideo', {
+							events: {
+								'onReady': onPlayerReady
+							}
+						});
+					}
+
+					function onPlayerReady(event) {
+						const observer = new IntersectionObserver((entries) => {
+							entries.forEach(entry => {
+								if (entry.isIntersecting) {
+									player.playVideo();
+								} else {
+									player.pauseVideo();
+								}
+							});
+						});
+
+						observer.observe(document.getElementById('youtubeVideo'));
+					}
+				</script>
 
 
 				<div class="project-block project-block-- project-block--images">
@@ -409,30 +459,7 @@ which one -->
 
 
 
-				<div class="container container--fw container--full-bleed relative">
-					<iframe
-						src="https://www.youtube.com/embed/RghqlKox8zw?si=sJkCbrpzd3ZC7QYQ&controls=0&autoplay=0&mute=1"
-						style=" display: flex;
-					justify-content: center;
-					align-items: center; margin: 0 auto; width: 94.5%; height: 56.25vw; max-height: 90vh; margin-bottom: 80px;"
-						title="HAY Store" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-						allowfullscreen>
-					</iframe>
-					<script>
-						const iframe = document.querySelector('iframe');
-						const observer = new IntersectionObserver((entries) => {
-							entries.forEach(entry => {
-								if (entry.isIntersecting) {
-									iframe.src = iframe.src.replace('&autoplay=0', '&autoplay=1');
-								} else {
-									iframe.src = iframe.src.replace('&autoplay=1', '&autoplay=0');
-								}
-							});
-						});
-
-						observer.observe(iframe);
-					</script>
-				</div>
+				
 
 
 
@@ -514,20 +541,7 @@ which one -->
 					</div>
 				</div>
 			</div>
-			<section id="Handtracking" class="projects sec-pad"> 
-				<div class="container container--fw container--full-bleed relative"></div>
-					<iframe
-						src="https://www.youtube.com/embed/uXPjgf22bLc?si=gZx-MUJLzZaw-Oom"
-						style=" display: flex;
-					justify-content: center; 
-					align-items: center; margin: 0 auto; width: 94.5%; height: 56.25vw; max-height: 90vh; margin-bottom: 80px;"
-						title="HAY Store" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-						allowfullscreen>
-					</iframe>
-				</div>
-
-
-			</section>
+			
 	</main>
 
 	</div>
